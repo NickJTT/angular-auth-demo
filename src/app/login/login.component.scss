@@ -1,0 +1,12 @@
+h3, form {
+  text-align: center;
+}
+
+form > div {
+  padding: 4px;
+  > {
+    label {
+      padding-right: 4px;
+    }
+  }
+}

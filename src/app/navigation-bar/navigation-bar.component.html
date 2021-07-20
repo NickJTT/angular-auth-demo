@@ -1,0 +1,11 @@
+<nav>
+  <p>Event Hub</p>
+  <a routerLink='/events' routerLinkActive='active'>Events</a>
+  <a routerLink='/special-events' routerLinkActive='active'>Members</a>
+  <span></span>
+  <a *ngIf='authService.isLoggedIn(); else loggedOut' (click)='authService.logout()'>Logout</a>
+  <ng-template #loggedOut>
+    <a routerLink='/login' *ngIf='!authService.isLoggedIn()' routerLinkActive='active'>Login</a>
+    <a routerLink='/register' *ngIf='!authService.isLoggedIn()' routerLinkActive='active'>Register</a>
+  </ng-template>
+</nav>

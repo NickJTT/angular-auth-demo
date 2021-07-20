@@ -1,0 +1,6 @@
+<div *ngFor='let event of events'>
+  <h5>{{event.name}}</h5>
+  <p>{{event.description}}</p>
+  <button>Buy Tickets</button>
+  <p>{{event.date | date:'shortDate'}}</p>
+</div>
